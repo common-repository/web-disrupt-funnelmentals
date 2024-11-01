@@ -1,0 +1,343 @@
+// main: style.less, out: ../style.css, compress: false, sourceMap: false
+
+@mobile-width: 640px;
+
+/* Settings Page */
+
+/* Settings Page */
+.wdf-header{
+    display:flex;
+    background:#fff;
+    margin-left:-20px;
+    padding:20px;
+    img{
+        width: 100px;
+    }
+    .wdf-body{
+        display:flex;
+        flex-direction:column;
+        padding:15px;
+    }
+}
+
+
+
+.wdf-main-body{
+    display:flex;
+    justify-content: flex-start;
+    /* mobile */
+    @media screen and (max-width: 1170px) {
+        flex-direction: column; 
+    }
+
+    .wdf-m-tab{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background:#f9f9f9;
+        margin:20px;
+        width:calc(~"100% - 30px");
+        @media screen and (max-width: 640px) {
+            margin:20px 0px 20px -10px;
+        }
+
+        max-width:500px;
+        box-shadow:2px 2px 8px rgba(0,0,0,.1);
+        padding:20px;
+        div{
+            display:flex;
+            width:100%;
+            flex-direction:column;
+            padding:10px 0px;
+            .section-header{
+                display:flex;
+                align-items:center;
+                padding:10px;
+                background: #fff;
+                border:1px solid #DDD;
+                margin-bottom: -1px;
+                img, i{
+                    margin-right:10px;
+                }
+            }     
+            textarea{
+                margin:0px;
+                padding:20px;
+            }
+
+        }
+    
+    }
+
+    .text-body{
+        h1{
+            line-height:35px;
+        }
+        .pro-feature-contianer{
+            background:#fff;
+            border: 1px solid #ddd;
+            border-bottom:3px solid #CCC;
+            padding:15px;
+            .pro-feature{
+                padding:15px 0px;
+                border-top: 1px solid #ddd;
+                &:first-of-type{
+                    border: none;
+                }
+            }
+        }
+        .professional-upgrade-btn{
+            padding:20px;
+            background:#292;
+            color:#fff;
+            text-align:center;
+            text-decoration: none;
+            margin:10px;
+            &:hover{
+                background:#494;
+            }
+        }
+    }
+
+
+
+    /* SPECIFIC TABS */
+        // License Window
+        #license-window{
+            width:calc(~"100% - 2px");
+            background:transparent;
+            border: 1px solid #DDD;
+        }
+        // Pro Tab
+        .wdf-get-pro div{
+            width:auto;
+        }
+        // Tabs to hide
+        .wdf-license, .wdf-get-pro{
+            display:none;
+        }
+
+
+    .wdf-global-actions{
+        display:flex;
+        flex-wrap:wrap;
+        @media screen and (min-width: 1170px) {
+            position:fixed;
+            left:700px;
+        }
+        max-width:500px;
+        background:#f9f9f9;
+        margin:20px;
+        box-shadow:2px 2px 8px rgba(0,0,0,.1);
+        padding:20px;
+        width:calc(~"100% - 30px");
+        @media screen and (max-width: 640px) {
+            margin:20px 0px 20px -10px;
+        }
+        .action-bar{
+            display:flex;
+            div{
+                padding:10px;
+                margin:1px;
+                color:#555;
+                cursor: pointer;
+                &.this-active{
+                    background-color:#333;
+                    color:#fff;
+                    border-radius: 8px;
+                    &:hover{
+                        color:#fff;
+                    }
+                }
+                &:hover{
+                    color:#F53;
+                }
+            }
+        }
+        #save-btn{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction:row-reverse;
+            background:#f40;
+            padding:20px;
+            color:#fff;
+            margin:20px 0px;
+            vertical-align:middle;
+            line-height: 35px;
+            width: 100%;
+            transition:1s;
+            cursor:pointer;
+            i{
+                margin-right:5px;
+                font-size:20px;
+            }
+            &:hover{
+                background:#f50;
+            }
+        }
+        #license-status{
+            display:flex;
+            width:100%;
+            height:50px;
+            margin-top:30px;
+            #license-input{
+                display:flex;
+                position:relative;
+                align-items: stretch;
+                input{
+                margin:1px 0px;
+                padding:10px 20px;
+                }
+                &::before{
+                    content:"Funnelmentals Activation License";
+                    position:absolute;
+                    top:-20px;
+                    left:0px;
+                }
+            }
+            #activate-btn{
+                margin:1px 0px;
+                flex-basis:50%;
+                background:#444;
+                &:hover{
+                    background:#555;
+                }
+            }
+        }
+    }
+}
+
+.description{
+    background:#fff;
+    display:block !important;
+    padding:8px !important;
+    border: 1px solid #ddd;
+    width: auto !important;
+}
+
+/* overrides */
+#toast-container > div {
+    opacity: 1 !important;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1) !important;
+  }
+  .toast-bottom-right {
+    bottom: 60px !important;
+  }
+  .toast {
+    background-color: #fff !important;
+    border-left: 6px solid #CCC;
+    color: #000 !important;
+    font-weight: bold;
+    position:relative;
+  }
+  .toast-close-button{
+    color:#999;
+  }
+  .toast-success {
+    background-color: #fff;
+    border-left: 6px solid #00CC00;
+    &::before{
+        color:#00CC00;
+        font-family: FontAwesome;
+        content: "\f00c";
+        position:absolute;
+        left:25px;
+    }
+  }
+  .toast-error {
+    background-color: #fff;
+    border-left: 6px solid #bd362f;
+  }
+  .toast-info {
+    background-color: #fff;
+    border-left: 6px solid #2f96b4;
+  }
+  .toast-warning {
+    background-color: #fff;
+    border-left: 6px solid #f89406;
+  }
+  #toast-container > div {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+ 
+
+
+/* Toggle Button */
+.toggle-row{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items: center !important;
+}
+.toggle-title{
+    padding-top:8px;
+    display:flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    font-weight:bold;
+}
+.toggle-control{
+    display:flex !important;
+    align-items: flex-end !important;
+}
+.toggle-wrapper {
+    text-align:center;
+    width:50px !important;
+
+  input.toggle {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  }
+  input.toggle + label {
+  display: inline-block;
+  position: relative;
+  box-shadow: inset 0 0 0px 1px #d5d5d5;
+  text-indent: -5000px;
+  height: 30px;
+  width: 50px;
+  border-radius: 15px;
+  }
+  
+  input.toggle + label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background: rgba(19,191,17,0);
+  -moz-transition: .25s ease-in-out;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  }
+  
+  input.toggle + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
+  -moz-transition: .25s ease-in-out;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  }
+  input.toggle:checked + label:before {
+  width: 50px;
+  background: rgba(19,191,17,1);
+  }
+  
+  input.toggle:checked + label:after {
+  left: 20px;
+  box-shadow: inset 0 0 0 1px rgba(19,191,17,1), 0 2px 4px rgba(0,0,0,.2);
+  }
+
+}

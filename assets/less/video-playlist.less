@@ -1,0 +1,44 @@
+// main: frontend.less
+.wdf-va-btn-container{
+    display:flex;
+    .wdf-va-btn-show-more {
+        cursor:pointer;
+        display:flex;
+        white-space: nowrap;
+    }
+}
+
+.wdf-va-loader{
+    margin: 0 0 2em;
+    min-height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wdf-va-item{ 
+    cursor:pointer; 
+}
+.wdf-va-search-container{
+    display:flex;
+    padding:10px;
+    width:100%;
+    z-index:20;
+    background:#333;
+    .wdf-va-btn-search {
+        cursor:pointer;
+        display:flex;
+        white-space: nowrap;
+    }
+    .wdf-va-search-input{
+        flex-grow:1;
+        border:none;
+        &:focus{
+            outline: none !important;
+            outline-style: none !important;
+        }
+    }
+}

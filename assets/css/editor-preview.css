@@ -1,0 +1,48 @@
+
+/* Hide Pop-up when elmentor editor open */
+.popup_wrapper, .popup_background, .web-disrupt-funnelmentals-close-modal-in-editor {
+	display:none !important;
+}
+
+
+/* Adjusting Height for floating elements */
+.elementor-widget-web-disrupt-funnelmentals-button-floating.elementor-widget-empty,
+.elementor-widget-web-disrupt-funnelmentals-scroll-nav.elementor-widget-empty,
+.elementor-widget-web-disrupt-funnelmentals-popup-modal.elementor-widget-empty  {
+	min-height:160px;
+}
+
+#elementor  .elementor-inner .elementor-widget-web-disrupt-funnelmentals-button-floating.elementor-widget-empty i.elementor-widget-empty-icon,
+#elementor  .elementor-inner .elementor-widget-web-disrupt-funnelmentals-scroll-nav.elementor-widget-empty i.elementor-widget-empty-icon,
+#elementor  .elementor-inner .elementor-widget-web-disrupt-funnelmentals-popup-modal.elementor-widget-empty i.elementor-widget-empty-icon {
+	color:#eb791c;
+	width:180px;
+	z-index:20;
+}
+
+#elementor  .elementor-inner .elementor-widget-web-disrupt-funnelmentals-button-floating.elementor-widget-empty i.elementor-widget-empty-icon:after {
+	content:'Edit Floating Button';
+	font-size:15px;
+	padding-left:6px;
+	position:relative;
+	top:-3px;
+	z-index:20;
+}
+
+#elementor  .elementor-inner .elementor-widget-web-disrupt-funnelmentals-scroll-nav.elementor-widget-empty i.elementor-widget-empty-icon:after {
+	content:'Edit Scroll Nav';
+	font-size:15px;
+	padding-left:6px;
+	position:relative;
+	top:-3px;
+	z-index:20;
+}
+#elementor  .elementor-inner .elementor-widget-web-disrupt-funnelmentals-popup-modal.elementor-widget-empty i.elementor-widget-empty-icon:after {
+	content:'Edit PopUp';
+	font-size:15px;
+	padding-left:6px;
+	position:relative;
+	top:-3px;
+	z-index:20;
+}
+

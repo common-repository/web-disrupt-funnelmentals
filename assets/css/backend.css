@@ -1,0 +1,35 @@
+/*  Table of Contents
+
+01. CUSTOM ELEMENTOR PANEL STYLES
+
+*/
+
+
+#elementor-panel-category-web-disrupt-funnelmentals 
+.web-disrupt-funnelmentals-icon {
+	color:#333;
+}
+
+#elementor-panel-category-web-disrupt-funnelmentals 
+.elementor-element:hover .web-disrupt-funnelmentals-icon {
+	color:#eb791c;
+}
+#elementor-panel-category-web-disrupt-funnelmentals 
+.elementor-element:hover .title {
+	color:#eb791c !important;
+}
+
+#elementor-panel-category-web-disrupt-funnelmentals 
+.elementor-element{
+	border-top: 3px solid #ddd;
+}
+
+#elementor-panel-category-web-disrupt-funnelmentals 
+.elementor-element:hover{
+	border-top: 3px solid #eb791c;
+}
+
+.elementor-control-wd_post_type_control select +  {
+	text-transform:capitalize;
+}
+
